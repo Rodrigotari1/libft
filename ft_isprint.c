@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_aplha.c                                  :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: rtari-ca <rtari-ca@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 09:03:28 by rodrigo           #+#    #+#             */
-/*   Updated: 2024/10/02 19:43:58 by rodrigo          ###   ########.fr       */
+/*   Created: 2024/10/03 11:47:58 by rtari-ca          #+#    #+#             */
+/*   Updated: 2024/10/03 11:49:55 by rtari-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-char *ft_str_is_aplha(char *str)
+int ft_isprint(int c)
 {
-    int i;
-    i = 0;
-    while(str[i])
-    {
-        if(str[i] >= 'a' && str[i] <= 'z')
-            return 1;
-        else
-            return 0;
-    }
+	if(c >= 32 && c <= 126 )
+	{
+		return (1);
+	}
+	return (0);
 }

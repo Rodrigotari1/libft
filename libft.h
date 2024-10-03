@@ -2,10 +2,10 @@
 #ifndef LIBFT_H
 #define LIBFT_H
 
-#include <stdlib.h>  // For malloc, free
-#include <unistd.h>  // For write
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
 
-// Function prototypes
 int     ft_atoi(const char *str);
 void    ft_bzero(void *s, size_t n);
 void    *ft_memccpy( void* restrict dest, const void* restrict src, int c, unsigned int count);
@@ -14,7 +14,7 @@ void    *ft_memset(void *b, int c, size_t len);
 char    *ft_strdup(const char *s1);
 int     ft_putstr(char *s);
 void    ft_putchar(char c);
-char    *ft_str_is_aplha(char *str);
+char    *ft_isaplha(char *str);
 char    *ft_strcat(char *dest, const char *src);
 int     ft_strcmp(const char *s1, const char *s2);
 char    *ft_strcpy(char *dest, char *src);
