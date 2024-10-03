@@ -6,11 +6,12 @@
 /*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 09:41:16 by rodrigo           #+#    #+#             */
-/*   Updated: 2024/09/25 18:16:45 by rodrigo          ###   ########.fr       */
+/*   Updated: 2024/10/02 19:44:36 by rodrigo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*#include <stdio.h>*/
+#include "libft.h"
 void ft_bzero(void *s, unsigned int n)
 {
     unsigned char *dtr = (unsigned char *)s;

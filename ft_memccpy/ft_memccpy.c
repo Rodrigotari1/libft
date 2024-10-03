@@ -6,9 +6,11 @@
 /*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 18:42:42 by rodrigo           #+#    #+#             */
-/*   Updated: 2024/09/26 13:56:13 by rodrigo          ###   ########.fr       */
+/*   Updated: 2024/10/02 19:55:11 by rodrigo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void *ft_memccpy( void* restrict dest, const void* restrict src, int c, unsigned int count )
 {

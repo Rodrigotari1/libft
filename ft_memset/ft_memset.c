@@ -6,12 +6,12 @@
 /*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 09:10:24 by rodrigo           #+#    #+#             */
-/*   Updated: 2024/09/25 09:40:45 by rodrigo          ###   ########.fr       */
+/*   Updated: 2024/10/02 19:44:10 by rodrigo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*#include <stdio.h>*/
-
+#include "libft.h"
 
 void *ft_memset(void *str, int c, unsigned int n)
 {

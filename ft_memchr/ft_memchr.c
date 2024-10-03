@@ -5,13 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 14:03:35 by rodrigo           #+#    #+#             */
-/*   Updated: 2024/09/26 16:31:34 by rodrigo          ###   ########.fr       */
+/*   Created: 2024/10/02 11:24:24 by rodrigo           #+#    #+#             */
+/*   Updated: 2024/10/02 19:44:51 by rodrigo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*#include <stdio.h>
 #include <string.h>*/
+#include "libft.h"
 
 void *ft_memchr(const void *str, int c, unsigned int n)
 {

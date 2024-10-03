@@ -6,11 +6,11 @@
 /*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 09:05:38 by rodrigo           #+#    #+#             */
-/*   Updated: 2024/10/02 11:04:36 by rodrigo          ###   ########.fr       */
+/*   Updated: 2024/10/02 19:46:53 by rodrigo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int ft_atoi(char *str)
 {

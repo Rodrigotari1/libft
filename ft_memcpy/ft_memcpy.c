@@ -6,9 +6,10 @@
 /*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 10:28:00 by rodrigo           #+#    #+#             */
-/*   Updated: 2024/09/25 10:31:45 by rodrigo          ###   ########.fr       */
+/*   Updated: 2024/10/02 19:44:22 by rodrigo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 void *ft_memcpy(void *dest, const void *src, unsigned int n) 
 {

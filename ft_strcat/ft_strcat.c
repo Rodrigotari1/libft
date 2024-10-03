@@ -5,10 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 17:05:45 by rodrigo           #+#    #+#             */
-/*   Updated: 2024/09/26 17:18:06 by rodrigo          ###   ########.fr       */
+/*   Created: 2024/10/02 19:42:25 by rodrigo           #+#    #+#             */
+/*   Updated: 2024/10/02 19:56:04 by rodrigo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char *ft_strcat(char *dest, const char *src)
 {
