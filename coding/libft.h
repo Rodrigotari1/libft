@@ -6,7 +6,7 @@
 /*   By: rtari-ca <rtari-ca@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 18:12:15 by rtari-ca          #+#    #+#             */
-/*   Updated: 2024/10/06 21:55:12 by rtari-ca         ###   ########.fr       */
+/*   Updated: 2024/10/06 22:36:13 by rtari-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
+void	*ft_calloc(size_t count, size_t size);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
