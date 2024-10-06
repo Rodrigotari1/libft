@@ -6,7 +6,7 @@
 /*   By: rtari-ca <rtari-ca@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 12:56:44 by rtari-ca          #+#    #+#             */
-/*   Updated: 2024/10/06 18:19:23 by rtari-ca         ###   ########.fr       */
+/*   Updated: 2024/10/06 20:04:21 by rtari-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
+	while (*s)
 	{
-		if (s[i] == (char)(c))
-			return ((char *)&s[i]);
-		i++;
+		if (*s == (char)(c))
+			return ((char *)s);
+		s++;
 	}
-	return (0);
+	if ((char)c == '\0')
+		return ((char *)s);
+	return (NULL);
 }
