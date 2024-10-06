@@ -3,56 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: rtari-ca <rtari-ca@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 16:20:46 by rodrigo           #+#    #+#             */
-/*   Updated: 2024/10/03 17:55:09 by rodrigo          ###   ########.fr       */
+/*   Updated: 2024/10/06 18:57:04 by rtari-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-    size_t dst_l;
-    size_t src_l;
-    size_t i;
-    size_t j;
+	size_t	dst_len;
+	size_t	src_len;
+	size_t	i;
 
-    dst_l = ft_strlen(dst);
-    src_l = ft_strlen(src);
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
 
-    j = dst_l;
-    i = 0;
+	if (dstsize <= dst_len)
+		return (dstsize + src_len);
 
-    if (dstsize > 0 && dst_l < dstsize - 1)
-    {
-        while (src[i] && dst_l + i < dstsize - 1)
-        {
-            dst[i] = src[i];
-            i++;
-            j++;
-        }
-        dst[j] = 0;
-    }
-    if (dst_l >= dstsize)
-        dst_l = dstsize;
-        return (dst_l + src_l);
+	i = 0;
+	while (src[i] && dst_len + i + 1 < dstsize)
+	{
+		dst[dst_len + i] = src[i];
+		i++;
+	}
+	dst[dst_len + i] = '\0';
+
+	return (dst_len + src_len);
 }
-
-#include <stdio.h>
-
-int main()
-{
-    char dst[20] = "Damn";
-    char src[] = "BOI";
-
-    size_t result = ft_strlcat(dst, src, sizeof(dst));
-
-    printf("resulting: %s\n", dst);
-    printf("lenght tried: %zu\n", result);
-
-    return 0;
-
-}
-

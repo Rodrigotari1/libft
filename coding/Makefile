@@ -1,39 +1,35 @@
-# The name of the library
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: rtari-ca <rtari-ca@student.42lausanne.c    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/10/06 18:14:18 by rtari-ca          #+#    #+#              #
+#    Updated: 2024/10/06 19:02:40 by rtari-ca         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 
-# Compiler and flags
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
-# List of source files
-SRC = ft_atoi.c \
-      ft_bzero.c \
-      ft_memccpy.c \
-      ft_memchr.c \
-      ft_memcpy.c \
-      ft_memmove.c \
-      ft_memset.c \
-      ft_putchar.c \
-      ft_putstr.c \
-      ft_isalpha.c \
-      ft_strcat.c \
-      ft_strcmp.c \
-      ft_strcpy.c \
-      ft_strjoin.c \
-      ft_strlen.c \
-      strlcpy.c
-
+SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
+      ft_isdigit.c ft_isprint.c ft_memchr.c ft_memcpy.c ft_memmove.c \
+      ft_memset.c ft_strchr.c ft_strdup.c ft_strlcat.c ft_strlcpy.c \
+      ft_strlen.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_tolower.c \
+      ft_toupper.c ft_substr.c ft_strjoin.c
 
 OBJ = $(SRC:.c=.o)
 
+all: $(NAME)
+
 $(NAME): $(OBJ)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+	ar rcs $(NAME) $(OBJ)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
-
-all: $(NAME)
 
 clean:
 	rm -f $(OBJ)

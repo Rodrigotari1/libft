@@ -3,47 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: rtari-ca <rtari-ca@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 11:24:24 by rodrigo           #+#    #+#             */
-/*   Updated: 2024/10/02 19:44:51 by rodrigo          ###   ########.fr       */
+/*   Updated: 2024/10/06 19:00:45 by rtari-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>
-#include <string.h>*/
 #include "libft.h"
 
-void *ft_memchr(const void *str, int c, unsigned int n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-    const unsigned char *s = (const unsigned char *)str;
-    unsigned int i;
-    i = 0;
+	const unsigned char	*str;
+	size_t	i;
+	i = 0;
 
-    while (i < n)
-    {
-        if (s[i] == (unsigned char) c)
-        {
-            return (void *)(s + i);
-        }
-        i++;
-    }
-    return (void *)0;
+	str = (const unsigned char *)s;
+	i = 0;
+	while (i < n)
+	{
+		if (str[i] == (unsigned char)c)
+			return ((void *)(s + i));
+		i++;
+	}
+	return (NULL);
 }
-
-/*int main() {
-    const char *str = "Hello, World!";
-    char ch = 'W';
-    unsigned int n = strlen(str); // Length of the string
-
-    // Use memchr to find the character 'W'
-    char *result = ft_memchr(str, ch, n);
-    
-    if (result != NULL) {
-        printf("Found '%c' at position: %ld\n", ch, result - str);
-    } else {
-        printf("Character '%c' not found.\n", ch);
-    }
-
-    return 0;
-}*/

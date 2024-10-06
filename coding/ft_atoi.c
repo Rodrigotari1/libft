@@ -3,50 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: rtari-ca <rtari-ca@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 09:05:38 by rodrigo           #+#    #+#             */
-/*   Updated: 2024/10/02 19:46:53 by rodrigo          ###   ########.fr       */
+/*   Updated: 2024/10/06 18:02:30 by rtari-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
-    int i = 0;
-    int sign = 1;
-    int result = 0;
+	int	i;
+	int	sign;
+	int	result;
 
-    // Skip any leading whitespace characters
-    while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
-    {
-        i++;
-    }
-
-    // Check for sign
-    if (str[i] == '-' || str[i] == '+')
-    {
-        if (str[i] == '-')
-            sign = -1;
-        i++;  // Move past the sign character
-    }
-
-    // Convert number
-    while (str[i] >= '0' && str[i] <= '9')
-    {
-        result = result * 10 + (str[i] - '0');
-        i++;
-    }
-
-    return (result * sign);
+	i = 0;
+	sign = 1;
+	result = 0;
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
+		|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			sign = -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		result = result * 10 + (str[i] - '0');
+		i++;
+	}
+	return (result * sign);
 }
-
-/* Example test program
-int main(void)
-{
-    char *str = "  -12345";
-    printf("%d\n", ft_atoi(str)); // Should print -12345
-    return (0);
-}
-*/

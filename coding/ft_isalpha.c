@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: rtari-ca <rtari-ca@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 16:32:18 by rodrigo           #+#    #+#             */
-/*   Updated: 2024/10/02 19:44:01 by rodrigo          ###   ########.fr       */
+/*   Created: 2024/10/03 11:25:54 by rtari-ca          #+#    #+#             */
+/*   Updated: 2024/10/06 18:55:21 by rtari-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
-int ft_putstr(char *str)
+int	ft_isalpha(int c)
 {
-    int i;
-    i = 0;
-
-    while(str[i])
-    {
-        write(1, str[i], 1);
-        i++;
-    }
-    return str;
+	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }

@@ -1,48 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcpy.c                                          :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: rtari-ca <rtari-ca@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 09:02:39 by rodrigo           #+#    #+#             */
-/*   Updated: 2024/10/02 11:16:49 by rodrigo          ###   ########.fr       */
+/*   Updated: 2024/10/06 18:27:55 by rtari-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-unsigned int ft_strlcpy(char *dest, const char *src, unsigned int size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-    unsigned int i;
-    i = 0;
-    
-    if (size == 0) {
-        while (src[i] != '\0') {
-            i++;
-        }
-        return i;
-    }
+	size_t	i;
 
-    while(src[i])
-    {
-        dest[i] = src[i];
-        i++;
-    }
-    dest[i] = '\0';
-
-    while(src[i])
-    {
-        i++;
-    }
-    return (i);
-}
-
-int main()
-{
-    char dest[20];
-    const char *src = "hey bud";
-
-    unsigned int len  = ft_strlcpy(dest, src, sizeof(dest));
-    printf("Test 1: %s (length: %u)\n", dest, len);
+	i = 0;
+	if (size == 0)
+	{
+		while (src[i] != '\0')
+			i++;
+		return (i);
+	}
+	while (src[i] && i < size - 1)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	if (size > 0)
+		dest[i] = '\0';
+	while (src[i])
+		i++;
+	return (i);
 }

@@ -3,22 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: rtari-ca <rtari-ca@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 10:28:00 by rodrigo           #+#    #+#             */
-/*   Updated: 2024/10/02 19:44:22 by rodrigo          ###   ########.fr       */
+/*   Updated: 2024/10/06 18:02:30 by rtari-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-void *ft_memcpy(void *dest, const void *src, unsigned int n) 
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-    unsigned char *d = (unsigned char *)dest; // Cast dest to unsigned char*
-    const unsigned char *s = (const unsigned char *)src; // Cast src to unsigned char*
-    
-    while (n--) { // Loop until n bytes are copied
-        *d++ = *s++; // Copy byte from src to dest
-    }
-    
-    return dest; // Return the destination pointer
+	unsigned char		*d;
+	const unsigned char	*s;
+
+	if (!dest && !src)
+		return (NULL);
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
+	while (n--)
+		*d++ = *s++;
+	return (dest);
 }

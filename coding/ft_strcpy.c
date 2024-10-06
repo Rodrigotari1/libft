@@ -3,35 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: rtari-ca <rtari-ca@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 12:38:08 by rodrigo           #+#    #+#             */
-/*   Updated: 2024/09/26 13:56:10 by rodrigo          ###   ########.fr       */
+/*   Updated: 2024/10/06 18:41:57 by rtari-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
-char *ft_strcpy(char *dest, char *src)
+char	*ft_strcpy(char *dst, const char *src)
 {
-    int i;
-    
-    i = 0;
-    while(src[i])
-    {
-    dest[i] = src[i];
-    i++;
-    }
-    dest[i] = '\0';
-    return (dest);
+	int	i;
+
+	i = 0;
+	while (src[i])
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (dst);
 }
-
-/*int main(void)
-{
-    char src[] = "lol";
-    char dest[5];
-    ft_strcpy(dest, src);
-    printf("%s", dest);
-    return 0;
-}*/

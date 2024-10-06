@@ -6,30 +6,23 @@
 /*   By: rtari-ca <rtari-ca@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 09:10:24 by rodrigo           #+#    #+#             */
-/*   Updated: 2024/10/03 12:00:21 by rtari-ca         ###   ########.fr       */
+/*   Updated: 2024/10/06 18:36:55 by rtari-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
 #include "libft.h"
 
-void *ft_memset(void *str, int c, unsigned int n)
+void	*ft_memset(void *b, int c, size_t len)
 {
-    unsigned int i;
-    i = 0;
-    while(i < n)
-    {
-        ((unsigned char *) str)[i] = (unsigned char) c;
-        i++;
+	unsigned char	*p;
+	size_t			i;
 
-    }
-    return (str);
+	p = (unsigned char *)b;
+	i = 0;
+	while (i < len)
+	{
+		p[i] = (unsigned char)c;
+		i++;
+	}
+	return (b);
 }
-
-/*int main(void)
-{
-    char str[] = "Hello, World!";
-    ft_memset(str, 'A', 5);
-    printf("%s\n", str);
-    return 0;
-}*/
