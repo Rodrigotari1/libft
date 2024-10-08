@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+         #
+#    By: rtari-ca <rtari-ca@student.42lausanne.c    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/06 18:14:18 by rtari-ca          #+#    #+#              #
-#    Updated: 2024/10/08 18:38:03 by rodrigo          ###   ########.fr        #
+#    Updated: 2024/10/08 20:03:43 by rtari-ca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
       ft_strlen.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_tolower.c \
       ft_toupper.c ft_substr.c ft_strjoin.c ft_putendl_fd.c ft_putchar_fd.c \
       ft_putstr_fd.c ft_memcmp.c ft_calloc.c ft_putnbr_fd.c ft_itoa.c \
-      ft_strmapi.c ft_striteri.c ft_strtrim ft_split.c
+      ft_strmapi.c ft_striteri.c ft_strtrim.c ft_split.c
 
 OBJ = $(SRC:.c=.o)
 
