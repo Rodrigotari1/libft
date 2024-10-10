@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: rtari-ca <rtari-ca@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 21:16:17 by rodrigo           #+#    #+#             */
-/*   Updated: 2024/10/07 21:44:52 by rodrigo          ###   ########.fr       */
+/*   Updated: 2024/10/10 17:48:09 by rtari-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@ static int	ft_numlen(int n)
 {
 	int	len;
 
-	len = (n <= 0) ? 1 : 0;
+	if (n <= 0)
+		len = 1;
+	else
+		len = 0;
 	while (n != 0)
 	{
 		n /= 10;

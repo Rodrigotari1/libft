@@ -12,22 +12,22 @@
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-    size_t beg;
-    beg = 0;
-    size_t end;
+	size_t	beg;
+	size_t	end;
 
-    if (!s1 || !set)
-        return (NULL);
-    while (s1[beg] && ft_strchr(set, s1[beg]))
-    {
-        beg++;
-    }
-    end = ft_strlen(s1);
-    while (end > beg && ft_strchr(set, s1[end - 1]))
-    {
-        end--;
-    }
-    return (ft_substr(s1, beg, end - beg));
+	beg = 0;
+	if (!s1 || !set)
+		return (NULL);
+	while (s1[beg] && ft_strchr(set, s1[beg]))
+	{
+		beg++;
+	}
+	end = ft_strlen(s1);
+	while (end > beg && ft_strchr(set, s1[end - 1]))
+	{
+		end--;
+	}
+	return (ft_substr(s1, beg, end - beg));
 }

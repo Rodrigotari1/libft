@@ -6,7 +6,7 @@
 /*   By: rtari-ca <rtari-ca@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 16:20:46 by rodrigo           #+#    #+#             */
-/*   Updated: 2024/10/06 18:57:04 by rtari-ca         ###   ########.fr       */
+/*   Updated: 2024/10/10 17:12:50 by rtari-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
-
 	if (dstsize <= dst_len)
 		return (dstsize + src_len);
-
 	i = 0;
 	while (src[i] && dst_len + i + 1 < dstsize)
 	{
@@ -31,6 +29,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		i++;
 	}
 	dst[dst_len + i] = '\0';
-
 	return (dst_len + src_len);
 }

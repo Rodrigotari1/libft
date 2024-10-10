@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: rtari-ca <rtari-ca@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 12:41:12 by rtari-ca          #+#    #+#             */
-/*   Updated: 2024/10/08 16:04:16 by rodrigo          ###   ########.fr       */
+/*   Updated: 2024/10/10 17:09:39 by rtari-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
-	char *dup;
-	size_t len;
+	char	*dup;
+	size_t	len;
 
 	len = ft_strlen(s1);
 	dup = (char *)malloc(sizeof(char) * (len + 1));
